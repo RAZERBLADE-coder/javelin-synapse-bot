@@ -10,7 +10,7 @@ from telegram.ext import (
 # BOT TOKEN
 # =========================================================
 
-TOKEN = "8636981335:AAHDGvTkctg303fmUnuA2ELAzOXGohQept8"
+TOKEN = ""
 
 
 # =========================================================
