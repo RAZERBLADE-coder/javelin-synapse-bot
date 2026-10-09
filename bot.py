@@ -5,12 +5,13 @@ from telegram.ext import (
     CallbackQueryHandler,
     ContextTypes,
 )
+import os
 
 # =========================================================
 # BOT TOKEN
 # =========================================================
 
-TOKEN = ""
+TOKEN = "os.environ["BOT_TOKEN"]"
 
 
 # =========================================================
