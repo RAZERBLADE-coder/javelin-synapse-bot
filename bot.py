@@ -1,3 +1,4 @@
+
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import (
     Application,
@@ -11,7 +12,7 @@ import os
 # BOT TOKEN
 # =========================================================
 
-TOKEN = "os.environ["BOT_TOKEN"]"
+TOKEN = os.environ["BOT_TOKEN"]
 
 
 # =========================================================
@@ -51,17 +52,9 @@ TEXTS = {
         "en": "🇬🇧 English",
         "ru": "🇷🇺 Русский",
 
-        # -------------------------------------------------
-        # UNDER CONSTRUCTION
-        # -------------------------------------------------
-
         "under_construction": (
             "🚧 Bu bo‘lim hozircha ishlab chiqilmoqda."
         ),
-
-        # -------------------------------------------------
-        # ABOUT
-        # -------------------------------------------------
 
         "about_text": """
 👨‍💻 *MEN HAQIMDA*
@@ -92,10 +85,6 @@ Doimiy o‘rganish, yaratish va rivojlanish — mening asosiy yo‘nalishim.
 
 ✦ *Powered By JΛVΞLIN Synapse⚡️* ✦
 """,
-
-        # -------------------------------------------------
-        # SKILLS
-        # -------------------------------------------------
 
         "skills_text": """
 🧠 *KO‘NIKMALARIM*
@@ -159,17 +148,9 @@ Protsessor va grafik protsessorlarning ishlash prinsiplari, arxitekturasi hamda 
         "en": "🇬🇧 English",
         "ru": "🇷🇺 Русский",
 
-        # -------------------------------------------------
-        # UNDER CONSTRUCTION
-        # -------------------------------------------------
-
         "under_construction": (
             "🚧 This section is currently under construction."
         ),
-
-        # -------------------------------------------------
-        # ABOUT
-        # -------------------------------------------------
 
         "about_text": """
 👨‍💻 *ABOUT ME*
@@ -200,10 +181,6 @@ Continuous learning, creating, and improving are the core principles of my journ
 
 ✦ *Powered By JΛVΞLIN Synapse⚡️* ✦
 """,
-
-        # -------------------------------------------------
-        # SKILLS
-        # -------------------------------------------------
 
         "skills_text": """
 🧠 *MY SKILLS*
@@ -267,17 +244,9 @@ Exploring how processors and graphics processors work, their architecture, and t
         "en": "🇬🇧 English",
         "ru": "🇷🇺 Русский",
 
-        # -------------------------------------------------
-        # UNDER CONSTRUCTION
-        # -------------------------------------------------
-
         "under_construction": (
             "🚧 Этот раздел пока находится в разработке."
         ),
-
-        # -------------------------------------------------
-        # ABOUT
-        # -------------------------------------------------
 
         "about_text": """
 👨‍💻 *ОБО МНЕ*
@@ -308,10 +277,6 @@ Exploring how processors and graphics processors work, their architecture, and t
 
 ✦ *Powered By JΛVΞLIN Synapse⚡️* ✦
 """,
-
-        # -------------------------------------------------
-        # SKILLS
-        # -------------------------------------------------
 
         "skills_text": """
 🧠 *МОИ НАВЫКИ*
@@ -510,11 +475,6 @@ async def button_handler(
         language = data.replace(
             "lang_",
             ""
-        )
-
-        old_language = context.user_data.get(
-            "language",
-            "uz"
         )
 
         context.user_data["language"] = language
